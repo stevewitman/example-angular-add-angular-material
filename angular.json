@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ex-add-angular-material"
+    }
+  },
+  "defaultProject": "ex-add-angular-material",
+  "cli": {
+    "analytics": false
+  }
 }
