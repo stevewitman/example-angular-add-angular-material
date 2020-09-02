@@ -1,27 +1,43 @@
-# ExAddAngularMaterial
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+Use schematic to add Angular Material
 
-## Development server
+```
+ng add @angular/material
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Choose a prebuilt theme name, or "custom" for a custom theme: **Indigo/Pink**
+- Set up global Angular Material typography styles? **Yes**
+- Set up browser animations for Angular Material? **Yes**
 
-## Code scaffolding
+```
+ng g module shared
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+ng g module shared/material
+```
 
-## Build
+Remove CommonModule import and from the imports array.
+Remove *declarations* and *imports* arrays.
+Add an *exports* array.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Import 
 
-## Running unit tests
+`import {MatButtonModule} from '@angular/material/button';`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add MatButtonModule to *exports* array.
 
-## Running end-to-end tests
+```js
+exports: [
+  MatButtonModule
+]
+````
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Import MaterialModule into SharedModule and add to imports and exports arrays.
 
-## Further help
+Import SharedModule into SharedModule and add to imports and exports arrays.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+I
+
